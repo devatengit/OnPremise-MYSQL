@@ -20,5 +20,5 @@ docker compose up
 ```
 to run the image/container exist in docker compose file.
 
-Once it run successfully you'll get ``` Agent Unique ID ``` which is useful when your going to add ```Agent```.
+Once it run successfully you'll get ``` Agent Unique ID ``` which is useful when you are going to add ```Agent```.
 
