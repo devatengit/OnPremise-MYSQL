@@ -1,0 +1,19 @@
+ version: '3.8'
+ networks:
+  devaten-mysql-agent:
+    name: devaten-mysql-agent
+    
+ services:
+ 
+   onpremise-mysqlagent-container:
+     image: devaten/on-premises-mysql-agent
+     container_name: onpremise-mysqlagent-container
+     restart: unless-stopped
+     ports:
+       - "8111:8111"
+     environment:
+       - spring.activemq.broker-url=tcp://127.0.0.1:61616
+     volumes:
+       - ./h2:/opt/h2-data:rw
+     networks:
+       - devaten-mysql-agent
